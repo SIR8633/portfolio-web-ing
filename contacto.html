@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Alí Hernández - Ingeniería Civil</title>
+    <link rel="stylesheet" href="css/style.css"> </head>
+<body>
+
+  <header>
+    <div class="container">
+        <div class="logo">
+            <h1><a href="index.html">Alí Hernández</a></h1>
+        </div>
+        <button class="mobile-nav-toggle" aria-label="Menú principal" aria-expanded="false">☰</button>
+        <nav class="main-nav">
+            <ul id="primary-navigation"> <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <h1>Hablemos de su Proyecto</h1>
+        <p>¿Tiene un proyecto en mente o necesita asesoramiento en diseño, gestión, tasación, cotización o licitaciones? No dude en escribirme.</p>
+
+      
+        <div class="contact-container"> <section id="formulario-contacto">
+                <h2>Formulario de Contacto</h2>
+                <form action="https://formspree.io/f/mgvkvvvl" method="POST">
+
+                    <div>
+                        <label for="name">Nombre y Apellido:</label><br>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Correo Electrónico:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="service">Servicio de Interés:</label><br>
+                        <select id="service" name="servicio" required>
+                            <option value="">-- Seleccione un servicio --</option>
+                            <option value="Diseño de Obras">Diseño de Obras</option>
+                            <option value="Gestión de Proyectos">Gestión de Proyectos</option>
+                            <option value="Tasaciones">Tasaciones Profesionales</option>
+                            <option value="Cotizaciones">Cotizaciones Precisas</option>
+                            <option value="Licitaciones">Preparación de Licitaciones</option>
+                            <option value="Consulta General">Consulta General</option>
+                        </select>
+                    </div>
+
+                     <div>
+                        <label for="phone">Teléfono (Opcional, WhatsApp Habilitado):</label><br>
+                        <input type="tel" id="phone" name="telefono">
+                    </div>
+
+                     <div>
+                        <label for="company">Empresa (Opcional):</label><br>
+                        <input type="text" id="company" name="empresa">
+                    </div>
+
+                    <div>
+                        <label for="message">Mensaje:</label><br>
+                        <textarea id="message" name="mensaje" rows="6" required></textarea>
+                    </div>
+
+                    <div>
+                         <label>
+                            <input type="checkbox" name="privacy" value="accepted" required>
+                            Acepto la Política de Privacidad y el tratamiento de mis datos.
+                         </label>
+                    </div>
+
+                    <div>
+                        <button type="submit">Enviar Consulta</button>
+                    </div>
+
+                </form>
+            </section>
+
+            <section id="info-alternativa">
+                <h2>Otros Medios de Contacto</h2>
+                <p>Si prefiere no usar el formulario, puede contactarme directamente:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:contacto@ingenieria-[tuapellido].com">contacto@ingenieria-[tuapellido].com</a></li>
+                    <li><strong>Teléfono / WhatsApp:</strong> <a href="tel:+54911XXXXXXXX">+54 9 11 XXXX-XXXX</a></li>
+                    <li><strong>Ubicación:</strong> Buenos Aires - CABA, Argentina</li>
+                    <li><strong>LinkedIn:</strong> <a href="URL_DE_TU_LINKEDIN" target="_blank" rel="noopener noreferrer">[Tu Nombre en LinkedIn]</a></li>
+                    </ul>
+                 <p>Intentaré responderle dentro de las próximas 24-48 horas hábiles.</p>
+            </section>
+
+        </div> </main>
+
+    <hr>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alí Hernández. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
