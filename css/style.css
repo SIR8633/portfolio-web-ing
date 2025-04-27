@@ -1,0 +1,813 @@
+/* Estilos Generales del Cuerpo */
+body {
+    /* Fuente más moderna: Usa la fuente del sistema operativo si está disponible */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 17px; /* Tamaño base un poco más grande para comodidad */
+    line-height: 1.7; /* Interlineado generoso mejora lectura */
+    color: #333; /* Color de texto principal */
+    background-color: #f4f4f4; /* Fondo general gris claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- BOTONES Y LLAMADAS A LA ACCIÓN (CTAs) --- */
+
+.btn,
+main section[id^="cta-"] a, /* Estilo para enlaces en secciones CTA */
+main article a[href*="contacto.html"] /* Estilo para enlaces de contacto en artículos */
+{
+    display: inline-block; /* Comportamiento de bloque pero en línea */
+    padding: 12px 25px; /* Relleno interno */
+    margin: 5px 10px 5px 0; /* Margen exterior (espacio a derecha) */
+    border: 1px solid transparent; /* Borde inicial transparente */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.95em; /* Tamaño de fuente */
+    font-weight: 600; /* Semi-bold */
+    text-align: center;
+    text-decoration: none !important; /* Asegura no subrayado */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para hover */
+    line-height: 1.4; /* Alineación vertical del texto */
+}
+
+/* Estilo Principal (Azul) */
+.btn,
+main section[id^="cta-"] a:first-of-type,
+main article a[href*="contacto.html"] {
+    background-color: #0056b3; /* Azul principal */
+    color: #ffffff !important; /* Texto blanco (importante para sobreescribir color base de 'a') */
+    border-color: #0056b3;
+}
+
+.btn:hover,
+main section[id^="cta-"] a:first-of-type:hover,
+main article a[href*="contacto.html"]:hover {
+    background-color: #003d80; /* Azul más oscuro */
+    border-color: #003d80;
+    color: #ffffff !important;
+    transform: translateY(-2px); /* Efecto sutil de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo Secundario (Bordeado o Gris Claro) */
+.btn-secondary,
+main section[id^="cta-"] a:not(:first-of-type) { /* Aplica a todos menos el primero en secciones CTA */
+    background-color: #f8f9fa; /* Fondo muy claro */
+    color: #0056b3 !important; /* Texto azul */
+    border-color: #dee2e6; /* Borde gris claro */
+}
+
+.btn-secondary:hover,
+main section[id^="cta-"] a:not(:first-of-type):hover {
+    background-color: #e9ecef; /* Gris un poco más oscuro */
+    border-color: #ced4da;
+    color: #003d80 !important; /* Azul oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Contenedor Principal para centrar contenido */
+/* Aplicamos a <main> para centrar el contenido principal de cada página */
+main {
+    max-width: 960px; /* Ancho máximo del contenido */
+    margin: 40px auto; /* Margen arriba/abajo aumentado, auto a los lados para centrar */
+    padding: 30px 40px; /* Más espacio interno dentro del contenedor */
+    background-color: #ffffff; /* Fondo blanco para el área de contenido */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); /* Sombra más suave y moderna */
+    border-radius: 5px; /* Bordes ligeramente redondeados (opcional) */
+}
+
+
+main section {
+    margin-bottom: 50px; /* Aumenta el espacio inferior entre secciones */
+}
+
+/* Asegurar buen espaciado entre artículos (para listas de proyectos/servicios) */
+main article {
+    margin-bottom: 40px;
+}
+
+/* Añadir un margen superior a la primera sección si viene después de un h1/p introductorio */
+main > h1 + p + section,
+main > h1 + section {
+    margin-top: 40px;
+}
+
+/* Estilos básicos para Títulos */
+
+h1 {
+    font-size: 2.4em; /* Un poco más grande */
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    font-weight: 600; /* Semi-bold para un look moderno */
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.9em; /* Ajuste de tamaño */
+    margin-top: 50px; /* Más espacio antes */
+    margin-bottom: 25px; /* Más espacio después */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eef1f5; /* Borde más sutil */
+    color: #1a1a1a;
+    font-weight: 600; /* Semi-bold */
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 1.5em; /* Ajuste de tamaño */
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600; /* Semi-bold */
+    line-height: 1.4;
+}
+
+/* Párrafos */
+p {
+    margin-bottom: 1.6em; /* Espacio basado en tamaño de fuente */
+    color: #555; /* Gris ligeramente más claro para texto normal */
+}
+
+/* Estilos básicos para Enlaces */
+a {
+    color: #0056b3; /* Azul estándar para enlaces */
+    text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+a:hover { /* Estilo cuando el mouse pasa por encima */
+    color: #003d80; /* Azul más oscuro */
+    text-decoration: underline; /* Añade subrayado al pasar el mouse */
+}
+
+/* Aplicamos específicamente a listas dentro de <main> */
+
+main ul, main ol {
+    padding-left: 25px; /* Indentación más ajustada */
+    margin-bottom: 1.6em;
+    color: #555;
+}
+
+main li {
+    margin-bottom: 0.8em; /* Espacio entre ítems de lista */
+}
+/* Énfasis */
+strong, b {
+    font-weight: 600; /* Usar semi-bold en lugar de bold por defecto */
+    color: #111; /* Casi negro para fuerte contraste */
+}/* Estilo básico para imágenes (evita que se desborden) */
+img {
+    max-width: 100%; /* Asegura que las imágenes no sean más anchas que su contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Añadimos espacio inferior a cada sección lógica */
+
+main section {
+    margin-bottom: 45px; /* Separa bien las secciones (Descripción, Beneficios, etc.) */
+}
+
+header {
+    background-color: #333; /* Fondo gris oscuro para el header */
+    color: #ffffff; /* Texto blanco */
+    padding: 15px 0; /* Relleno arriba/abajo 15px, 0 a los lados */
+    border-bottom: 4px solid #0056b3; /* Línea azul de acento inferior */
+    position: sticky; /* Para que quede fija arriba (opcional) */
+    top: 0; /* Necesario si se usa sticky */
+    z-index: 10; /* Asegura que esté por encima de otro contenido si es sticky */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* --- SECCIÓN HERO (Página de Inicio) --- */
+
+#hero {
+    background-color: #eef1f5; /* Fondo gris azulado muy claro */
+    padding: 60px 40px; /* Relleno generoso */
+    text-align: center; /* Texto centrado */
+    margin: -30px -40px 40px -40px; /* Expande al ancho de main y ajusta márgenes */
+    border-radius: 5px 5px 0 0; /* Redondea esquinas superiores si main tiene borde redondeado */
+}
+
+#hero h1 {
+    font-size: 2.6em; /* Título más grande */
+    color: #003d80; /* Azul oscuro */
+    margin-bottom: 15px;
+    border-bottom: none; /* Quitar borde si lo hereda de h1 general */
+}
+
+#hero p {
+    font-size: 1.15em; /* Texto introductorio un poco más grande */
+    color: #495057; /* Gris oscuro */
+    max-width: 750px; /* Ancho máximo del párrafo */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px; /* Espacio antes de los botones */
+}
+
+#hero .btn, #hero .btn-secondary {
+    font-size: 1em; /* Tamaño normal para botones aquí */
+}
+
+/* --- LISTAS DE PROYECTOS Y SERVICIOS (Tarjetas) --- */
+
+#lista-proyectos, #lista-servicios {
+    /* Opcional: Usar Grid para un layout más robusto si son muchos items */
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    /* gap: 30px; */
+}
+
+.proyecto-item, .servicio-item {
+    background-color: #ffffff;
+    border: 1px solid #eef1f5; /* Borde muy sutil */
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 30px; /* Espacio entre tarjetas */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* Asegura que contenido interno no desborde los bordes redondeados */
+}
+
+.proyecto-item:hover, .servicio-item:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+    transform: translateY(-4px); /* Eleva la tarjeta ligeramente */
+}
+
+/* Imágenes dentro de las tarjetas de proyecto */
+.proyecto-item img {
+    display: block;
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 180px; /* Altura fija (ajusta según tus imágenes) */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #eee; /* Borde sutil por si la imagen es blanca */
+}
+
+.proyecto-item a h2, /* Linkeado el título */
+.servicio-item h2 { /* Título no linkeado */
+    margin-top: 0; /* Quitar margen superior */
+    margin-bottom: 10px;
+    font-size: 1.4em; /* Tamaño ajustado para tarjeta */
+    border-bottom: none; /* Sin borde inferior aquí */
+    color: #0056b3; /* Color azul para destacar */
+}
+.proyecto-item a:hover h2 {
+    color: #003d80; /* Oscurece al hacer hover en el título */
+}
+
+
+.proyecto-item p, .servicio-item p {
+    font-size: 0.95em; /* Texto descriptivo ligeramente más pequeño */
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Enlace "Ver más detalles" */
+.proyecto-item a[href^="proyectos/"],
+.servicio-item a[href^="servicios/"] {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.proyecto-item a[href^="proyectos/"]:hover,
+.servicio-item a[href^="servicios/"]:hover {
+    color: #003d80;
+    text-decoration: underline;
+}
+
+/* --- PÁGINAS DE DETALLE (Servicios / Proyectos) --- */
+
+.proyecto-detalle h1,
+main > h1 /* Títulos en páginas de servicio */
+{
+    margin-bottom: 30px;
+}
+
+.proyecto-detalle img[width="400"] /* Imagen principal del proyecto */
+{
+    display: block;
+    max-width: 60%; /* No ocupa todo el ancho, centrado */
+    height: auto;
+    margin: 0 auto 30px auto; /* Centrada y con espacio inferior */
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Secciones clave como Info, Descripción, Rol, Beneficios */
+#info-clave, #descripcion, #dirigido-a, #entregables, #beneficios,
+#descripcion-proyecto, #rol-contribucion, #aspectos-destacados {
+    margin-bottom: 40px;
+}
+
+#info-clave p,
+#entregables ul,
+#habilidades ul /* En sobre-mi.html */
+{
+    margin-bottom: 0.8em; /* Menos espacio entre ítems informativos */
+}
+
+#info-clave p strong,
+#entregables h3,
+#habilidades li strong {
+    color: #333; /* Color menos intenso para etiquetas */
+    margin-right: 8px; /* Espacio después de la etiqueta */
+}
+
+/* Galería de imágenes en detalle de proyecto */
+#galeria-proyecto {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes pasen a la siguiente línea */
+    gap: 15px; /* Espacio entre imágenes */
+    margin-top: 20px;
+}
+
+#galeria-proyecto h2 {
+    width: 100%; /* Ocupa todo el ancho antes de las imágenes */
+    margin-bottom: 15px;
+    border-bottom: none; /* Sin borde */
+}
+
+#galeria-proyecto img {
+    max-width: 180px; /* Tamaño máximo para miniaturas */
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#galeria-proyecto img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Enlace "Volver" */
+main p > a[href$="servicios.html"],
+main p > a[href$="proyectos.html"] {
+    display: inline-block; /* Para poder aplicar margen superior */
+    margin-top: 30px;
+    font-weight: 600;
+    color: #555;
+}
+main p > a[href$="servicios.html"]:hover,
+main p > a[href$="proyectos.html"]:hover {
+    color: #000;
+}
+
+/* Ajuste específico para 'sobre-mi.html' */
+#introduccion {
+    display: flex; /* Poner imagen y texto lado a lado */
+    align-items: flex-start; /* Alinear arriba */
+    gap: 30px; /* Espacio entre imagen y texto */
+}
+#introduccion img {
+    border-radius: 50%; /* Hacer la foto redonda */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+#introduccion h2 {
+    margin-top: 0; /* Quitar margen superior del h2 */
+    border-bottom: none;
+}
+
+/* --- RESUMEN DE SERVICIOS (Página de Inicio) --- */
+
+#resumen-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Columnas adaptables */
+    gap: 25px; /* Espacio entre los items */
+    margin-top: 30px;
+}
+
+#resumen-servicios h2 { /* Título principal de la sección */
+    grid-column: 1 / -1; /* Ocupa todas las columnas */
+    margin-bottom: 20px;
+}
+
+#resumen-servicios div { /* Cada item de servicio */
+    border: 1px solid #eef1f5;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fdfdfd; /* Fondo ligeramente distinto al main */
+    transition: background-color 0.3s ease;
+}
+#resumen-servicios div:hover {
+    background-color: #f8f9fa;
+}
+
+
+#resumen-servicios h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+#resumen-servicios p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 0; /* Sin margen inferior extra */
+    line-height: 1.6;
+}
+
+/* Ocultar el párrafo que tenías oculto por defecto (si aún lo quieres) */
+/* #resumen-servicios p { display: none; } */
+/* Si quieres mostrarlo al hacer hover en el div: */
+/*
+#resumen-servicios div:hover p {
+    display: block;
+}
+*/
+/* Nota: Decidí mostrarlo por defecto basado en tu estructura actual */
+
+/* Contenedor interno del header */
+header .container {
+    max-width: 960px; /* Mismo ancho que 'main' para alinear */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 15px; /* Padding lateral igual que 'main' */
+    display: flex; /* Activa Flexbox para alinear elementos hijos */
+    justify-content: space-between; /* Empuja el logo a la izq y nav a la der */
+    align-items: center; /* Centra verticalmente los ítems */
+}
+
+/* Estilo del Logo/Nombre */
+header .logo h1 {
+    margin: 0; /* Quita margen por defecto del h1 */
+    padding: 0;
+}
+
+header .logo a {
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.6em; /* Tamaño de fuente para el nombre */
+    font-weight: bold;
+}
+
+/* Estilos de la Navegación */
+header nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Pone los elementos de la lista en línea */
+}
+
+header nav ul li {
+    margin-left: 25px; /* Espacio a la izquierda de cada ítem (excepto el primero) */
+}
+
+header nav ul li a {
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1em; /* Tamaño de fuente del menú */
+    padding: 5px 0; /* Pequeño relleno para facilitar click */
+    transition: color 0.3s ease; /* Efecto suave al cambiar color */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active { /* Estilo para hover y página activa (lo definiremos luego) */
+    color: #aaccff; /* Celeste claro al pasar el mouse o si es la página activa */
+}
+
+footer {
+    background-color: #333; /* Mismo fondo oscuro que el header */
+    color: #ccc; /* Texto gris claro (un poco menos brillante que en header) */
+    text-align: center; /* Centra el texto dentro del footer */
+    padding: 25px 0; /* Relleno arriba/abajo */
+    margin-top: 50px; /* Un buen espacio entre el contenido principal y el footer */
+    border-top: 4px solid #0056b3; /* Mismo borde azul que el header */
+}
+
+/* Contenedor interno del footer */
+footer .container {
+    max-width: 960px; /* Mismo ancho que 'main' y 'header .container' */
+    margin: 0 auto; /* Centrar */
+    padding: 0 15px; /* Padding lateral */
+}
+
+/* Estilo para los párrafos dentro del footer */
+footer p {
+    margin: 5px 0; /* Margen pequeño entre párrafos si hay varios */
+    font-size: 0.9em; /* Tamaño de fuente ligeramente reducido */
+}
+
+/* Estilo para futuros enlaces en el footer */
+footer a {
+    color: #ccc; /* Mismo color que el texto normal del footer */
+    text-decoration: underline; /* Subrayado para distinguirlos */
+}
+
+footer a:hover {
+    color: #fff; /* Texto blanco al pasar el mouse */
+}
+
+/* ========== Estilos del Formulario de Contacto ========== */
+
+/* Contenedor para posible layout de 2 columnas */
+.contact-container {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+    gap: 40px; /* Espacio entre el formulario y la info alternativa */
+    margin-top: 30px; /* Espacio sobre el contenedor */
+}
+
+/* Sección del formulario */
+#formulario-contacto {
+    flex: 2; /* Hace que el formulario ocupe el doble de espacio que la info (aprox 2/3) */
+    min-width: 300px; /* Ancho mínimo antes de que la info baje */
+}
+
+#formulario-contacto h2 {
+    margin-top: 0; /* Quitar margen superior si es el primer elemento */
+    border-bottom: none; /* Quitar borde inferior aquí */
+}
+
+/* Espaciado entre cada grupo label/input */
+#formulario-contacto div {
+    margin-bottom: 22px;
+}
+
+/* Estilo de las etiquetas */
+#formulario-contacto label {
+    display: block; /* La etiqueta ocupa su propia línea */
+    margin-bottom: 6px; /* Espacio entre etiqueta y campo */
+    font-weight: 600; /* Negrita ligera */
+    color: #444;
+    font-size: 0.95em;
+}
+
+/* Estilo unificado para campos de texto, email, tel, select y textarea */
+#formulario-contacto input[type="text"],
+#formulario-contacto input[type="email"],
+#formulario-contacto input[type="tel"],
+#formulario-contacto select,
+#formulario-contacto textarea {
+    width: 100%; /* Ocupan todo el ancho disponible */
+    padding: 12px 15px; /* Relleno interno confortable */
+    border: 1px solid #ccc; /* Borde gris sutil */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Importante para que padding no aumente el ancho total */
+    font-size: 1em; /* Tamaño de fuente legible */
+    font-family: inherit; /* Usa la fuente definida en body */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo al enfocar un campo */
+#formulario-contacto input:focus,
+#formulario-contacto select:focus,
+#formulario-contacto textarea:focus {
+    border-color: #0056b3; /* Borde azul al seleccionar */
+    outline: none; /* Quita el resplandor por defecto del navegador */
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2); /* Sombra/resplandor azul suave */
+}
+
+/* Ajustes específicos para textarea */
+#formulario-contacto textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+    min-height: 140px; /* Altura mínima */
+}
+
+/* Ajustes para la etiqueta del checkbox */
+#formulario-contacto label input[type="checkbox"] {
+    margin-right: 10px; /* Espacio entre el check y el texto */
+    vertical-align: baseline; /* Alinea mejor el check con la primera línea de texto */
+    width: auto; /* Ancho automático para checkbox */
+}
+/* Centrar el texto de la etiqueta del checkbox */
+#formulario-contacto label[for="privacy"] {
+    /* Puedes añadir estilos específicos si es necesario */
+}
+
+
+/* Estilo del botón de envío */
+/* Reutilizamos y ajustamos los estilos de .btn */
+#formulario-contacto button[type="submit"] {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 12px 30px; /* Padding generoso */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em; /* Ligeramente más grande */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+#formulario-contacto button[type="submit"]:hover {
+    background-color: #003d80; /* Azul más oscuro */
+    transform: translateY(-2px); /* Efecto elevación */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra */
+}
+
+/* Sección de Información Alternativa */
+#info-alternativa {
+    flex: 1; /* Ocupa el espacio restante (aprox 1/3) */
+    min-width: 280px; /* Ancho mínimo antes de bajar */
+    background-color: #f8f9fa; /* Fondo gris claro para diferenciar */
+    padding: 25px 30px; /* Relleno interno */
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+#info-alternativa h2 {
+    margin-top: 0; /* Sin margen superior para el título dentro de esta caja */
+    border-bottom: none; /* Sin borde inferior */
+    margin-bottom: 25px; /* Espacio después del título */
+}
+
+#info-alternativa ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Quita padding por defecto */
+    margin: 0;
+}
+
+#info-alternativa li {
+    margin-bottom: 18px; /* Espacio entre ítems de contacto */
+    font-size: 0.95em;
+    /* Podríamos añadir iconos aquí con ::before */
+}
+
+#info-alternativa li strong {
+    /* Estilo si quieres para las etiquetas Email, Teléfono, etc. */
+     margin-right: 5px;
+}
+
+/* ========== FIN Estilos Formulario Contacto ========== */
+
+/* ================================= */
+/* === Media Queries (Responsive) === */
+/* ================================= */
+
+/* Estilos para pantallas con ancho MÁXIMO de 768px (Tablets y Móviles) */
+@media (max-width: 768px) {
+
+    /* --- Ajustes Generales --- */
+    main {
+        padding: 20px 15px; /* Reducir padding lateral en <main> */
+        margin: 20px auto; /* Reducir margen vertical */
+    }
+
+    body {
+        font-size: 16px; /* Reducir ligeramente tamaño base si es necesario */
+    }
+
+    h1 { font-size: 2em; } /* Reducir tamaño de títulos */
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.3em; }
+
+
+    /* --- Ajustes de Layout Específicos --- */
+
+    /* Header: Apilar logo y navegación */
+    header .container {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centrar logo y nav cuando están apilados */
+    }
+    header nav {
+      margin-top: 15px; /* Espacio entre logo y nav */
+    }
+    /* Nota: Menú aún necesita mejora para móvil (tipo hamburguesa), esto es básico */
+
+
+    /* Sobre Mí: Apilar imagen y texto */
+    #introduccion {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centrar contenido */
+        text-align: center; /* Centrar texto */
+    }
+    #introduccion img {
+        margin-bottom: 25px; /* Espacio debajo de la foto */
+        width: 120px; /* Hacer la foto un poco más pequeña */
+        height: 120px;
+    }
+
+
+    /* Contacto: Apilar formulario e info */
+    .contact-container {
+        flex-direction: column; /* Cambia de fila a columna */
+    }
+    /* Opcional: quitar fondo/borde a info alternativa en móvil */
+    #info-alternativa {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+
+    /* Proyectos Detalle: Ajustar imagen principal */
+    .proyecto-detalle img[width="400"] { /* Imagen principal del proyecto */
+        max-width: 90%; /* Que no ocupe todo el ancho, pero más que antes */
+    }
+
+
+    /* Galería Proyecto Detalle: Imágenes más pequeñas */
+     #galeria-proyecto img {
+        max-width: 120px; /* Miniaturas un poco más chicas */
+    }
+
+
+    /* Podríamos añadir aquí ajustes para las tarjetas de servicios/proyectos si
+       hubiéramos usado Grid/Flex complejo, para asegurar que se vean bien en 1 columna */
+    .proyecto-item, .servicio-item {
+        /* Quizás reducir padding interno si es necesario */
+        padding: 20px;
+    }
+     #resumen-servicios {
+         grid-template-columns: 1fr; /* Forzar una sola columna */
+     }
+
+
+} /* Fin de @media (max-width: 768px) */
+
+
+/* Podríamos añadir MÁS media queries para pantallas aún más pequeñas si es necesario */
+/* Por ejemplo: @media (max-width: 480px) { ... } */
+
+
+/* ========== Estilos Navegación Móvil ========== */
+
+.mobile-nav-toggle {
+    display: none; /* Oculto en pantallas grandes */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px; /* Tamaño del icono hamburguesa */
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1; /* Ajuste para centrar mejor el icono */
+}
+
+/* Estilos para el menú cuando está abierto en móvil (controlado por JS añadiendo clase 'nav-open') */
+.main-nav ul.nav-open {
+    display: flex; /* Usamos flex para mostrarlo */
+    flex-direction: column; /* Items en columna */
+    position: absolute; /* Posición absoluta para superponer */
+    top: 73px; /* Debajo del header (ajusta si tu header tiene altura diferente) */
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.98); /* Fondo oscuro semi-transparente */
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #555;
+    z-index: 9; /* Asegura que esté sobre el contenido pero debajo del header (que tiene 10) */
+}
+
+.main-nav ul.nav-open li {
+    margin: 0;
+    text-align: center; /* Centra el texto del enlace */
+    border-bottom: 1px solid #555; /* Línea divisoria entre ítems */
+}
+.main-nav ul.nav-open li:last-child {
+    border-bottom: none; /* Sin borde en el último ítem */
+}
+
+.main-nav ul.nav-open li a {
+    display: block; /* El enlace ocupa todo el espacio */
+    padding: 18px 15px; /* Padding generoso para tocar fácil */
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500; /* Un poco menos grueso que el logo */
+}
+
+.main-nav ul.nav-open li a:hover {
+    background-color: #0056b3; /* Fondo azul al pasar/tocar */
+    color: white;
+    text-decoration: none;
+}
+
+/* --- AHORA, modifica la Media Query que ya tenías --- */
+/* Busca tu bloque @media (max-width: 768px) { ... } y DENTRO de él: */
+
+/* 1. OCULTA la navegación normal */
+@media (max-width: 768px) {
+    /* ... (los otros estilos que ya tenías para 768px) ... */
+
+    /* Ocultar el menú de escritorio */
+    .main-nav ul { /* La lista normal */
+        display: none;
+    }
+
+    /* Mostrar el botón hamburguesa */
+    .mobile-nav-toggle {
+        display: block; /* Hacer visible el botón */
+    }
+
+    /* Reajustar el header para que logo y botón queden bien */
+    header .container {
+        flex-direction: row; /* Asegura que estén en la misma fila */
+        justify-content: space-between; /* Logo izq, botón der */
+    }
+     /* (Quizás necesites ajustar el tamaño del logo aquí si no lo hiciste antes) */
+     header .logo h1 { font-size: 1.4em; }
+
+    /* ... (resto de tus estilos para 768px) ... */
+}
