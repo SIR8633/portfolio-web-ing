@@ -716,3 +716,28 @@ footer a:hover {
 
     header .logo h1 { font-size: 1.4em; }
 }
+/* Estilo específico para el botón de WhatsApp */
+#sendWhatsAppBtn {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white !important; /* Asegura texto blanco */
+    border: 1px solid #1DAE54; /* Borde un poco más oscuro */
+    /* Puedes copiar otros estilos de .btn si quieres (padding, border-radius, etc.) */
+    /* o añadir la clase .btn al botón en el HTML y solo sobrescribir el background-color */
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1.4;
+    /* margin-left: 10px; quitamos el style en línea y lo manejamos aquí si queremos */
+}
+
+#sendWhatsAppBtn:hover {
+    background-color: #1DAE54; /* Verde más oscuro al pasar el mouse */
+    border-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
