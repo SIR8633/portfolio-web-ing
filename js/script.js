@@ -57,7 +57,7 @@ if (whatsAppBtn && contactFormForWhatsApp) {
         // Formato internacional sin '+' o ceros iniciales si no son necesarios para wa.me,
         // pero sí el código de país. Para Argentina: 549 seguido de tu número sin el 0 y sin el 15.
         // Ejemplo: si tu número es +54 9 11 2345-6789, usa 5491123456789
-        const tuNumeroWhatsApp = '549XXXXXXXXXX'; // ¡REEMPLAZA ESTO!
+        const tuNumeroWhatsApp = '5491126887959'; // ¡REEMPLAZA ESTO!
 
         // Construir el mensaje
         let waMessage = `¡Hola Alí! Te contacto desde tu sitio web:\n\n`;
