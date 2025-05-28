@@ -37,3 +37,50 @@ document.addEventListener('click', (event) => {
     }
 });
 */
+// --- Funcionalidad Botón Enviar por WhatsApp (contacto.html) ---
+const whatsAppBtn = document.getElementById('sendWhatsAppBtn');
+// Asumimos que tu formulario está dentro de la sección con id="formulario-contacto"
+// y es el primer (o único) <form> dentro de esa sección.
+const contactFormForWhatsApp = document.querySelector('#formulario-contacto form');
+
+if (whatsAppBtn && contactFormForWhatsApp) {
+    whatsAppBtn.addEventListener('click', function() {
+        // Obtener los valores de los campos del formulario
+        const name = contactFormForWhatsApp.elements.name.value;
+        const email = contactFormForWhatsApp.elements.email.value;
+        const service = contactFormForWhatsApp.elements.servicio.value;
+        const phone = contactFormForWhatsApp.elements.telefono.value; // Teléfono del visitante
+        const company = contactFormForWhatsApp.elements.empresa.value;
+        const message = contactFormForWhatsApp.elements.mensaje.value;
+
+        // --- ¡IMPORTANTE! REEMPLAZA CON TU NÚMERO DE WHATSAPP ---
+        // Formato internacional sin '+' o ceros iniciales si no son necesarios para wa.me,
+        // pero sí el código de país. Para Argentina: 549 seguido de tu número sin el 0 y sin el 15.
+        // Ejemplo: si tu número es +54 9 11 2345-6789, usa 5491123456789
+        const tuNumeroWhatsApp = '549XXXXXXXXXX'; // ¡REEMPLAZA ESTO!
+
+        // Construir el mensaje
+        let waMessage = `¡Hola Alí! Te contacto desde tu sitio web:\n\n`;
+        waMessage += `*Nombre:* ${name}\n`;
+        waMessage += `*Email:* ${email}\n`;
+        if (service) {
+            waMessage += `*Servicio de Interés:* ${service}\n`;
+        }
+        if (phone) {
+            waMessage += `*Teléfono del Contacto:* ${phone}\n`;
+        }
+        if (company) {
+            waMessage += `*Empresa:* ${company}\n`;
+        }
+        waMessage += `*Mensaje:* ${message}\n`;
+
+        // Codificar el mensaje para la URL
+        const encodedMessage = encodeURIComponent(waMessage);
+
+        // Crear el enlace de WhatsApp
+        const whatsappURL = `https://wa.me/${tuNumeroWhatsApp}?text=${encodedMessage}`;
+
+        // Abrir WhatsApp en una nueva pestaña/aplicación
+        window.open(whatsappURL, '_blank');
+    });
+}
